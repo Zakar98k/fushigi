@@ -8,15 +8,14 @@ tags: ['hugo', 'updates', 'old-site']
 # New site?
 Yup. I don't plan on keeping the [old one](https://zakar98k.github.io/z-station), since it's outdated and it's hard to keep it updated with new content. My current site (this one) is built with [hugo](https://gohugo.io/), a framwork for building static sites by converting markdown files into HTML.
 
-## Why make a new one?
-While I do like the ideas and the look and feel of my previous website, I also want to move on to more a more modern approach and framework. Hugo does exactly that, and it makes it so easy to update, build, and deploy content-driven, portfolio-type websites.
+Why make a new one? While I do like the ideas and the look and feel of my previous website, I also want to move on to more a more modern approach and framework. Hugo does exactly that, and it makes it so easy to update, build, and deploy content-driven, portfolio-type websites.
 
-## What's next?
 ### Project updates and showcase
 I'm currently working on a few games and projects, namely my 2D space shooter, Space Pirate April. Bookmark my site or the project's Github repo if you want to stay updated.
 
 ### Site theme
 Do expect some changes to the current site theme. I just love theming and personalizing in general, it's what distinguishes and individualizes the projects you create from every other monotone and boring kind of style online. I suppose I'll get around to theming when I finish brushing up on my CSS skills.
 
-## That is all
+That is all
+
 Thanks for reading, and have a great day! 😌
