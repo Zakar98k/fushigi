@@ -1,5 +1,5 @@
 baseURL: "https://examplesite.com/"
-title: ExampleSite
+title: Zach Quita
 paginate: 5
 theme: PaperMod
 
@@ -68,8 +68,8 @@ params:
     buttons:
       - name: Posts
         url: /posts
-      - name: Tags
-        url: /tags
+      - name: Projects
+        url: /projects
 
   # home-info mode
   homeInfoParams:
