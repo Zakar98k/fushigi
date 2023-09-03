@@ -12,10 +12,10 @@ Hi, I'm Zach. I'm a highschool student who loves **coding**, **gamedev**, and **
 
 _incoming cringe face reveal_
 
-  <img src="/me.png" alt="this is me" style="border-radius: 50%; max-width: 60%; height: auto;">
+  <img src="/me.png" alt="this is me" style="border-radius: 50%; max-width: 50%; height: auto;">
 </div>
 
 ---
 
 # About the site
-I'll mainly use this site as a space to post updates, showcase my projects, as well as things in my interest. Feel free to click around and I hope you enjoy your stay.
+I'll mainly use this site as a space to post updates about my current [projects](/projects), share [my thoughts](/posts) on things that interest me, and more. Feel free to click aroud, and thanks for dropping by.

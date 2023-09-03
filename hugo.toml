@@ -18,7 +18,7 @@ sectionPagesMenu = "main"
 noindex = false
 
 [params.theme]
-palette = "tokyo-night-dark"
+palette = "black-metal-venom"
 #palette = "gruvbox-dark"
 
 #Sidebar: about/bio
@@ -54,6 +54,12 @@ url = "https://www.instagram.com/zakar98k/"
     name = "About"
     url = "/about/"
     weight = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 30
 
 [taxonomies]
 category = "categories"
