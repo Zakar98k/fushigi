@@ -12,7 +12,7 @@ Hi, I'm Zach. I'm a highschool student who loves **coding**, **gamedev**, and **
 
 _incoming cringe face reveal_
 
-  <img src="/me.png" alt="this is me" style="border-radius: 50%; max-width: 50%; height: auto;">
+  <img src="/images/me.png" alt="this is me" style="border-radius: 50%; max-width: 50%; height: auto;">
 </div>
 
 ---
