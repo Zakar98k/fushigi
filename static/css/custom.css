@@ -1,1 +1,45 @@
 /* Override this file to customise the theme's CSS for your site */
+div.gallery {
+  margin: 5px;
+  border: 1px solid var(--off-bg);
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid var(--muted);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc,
+p.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}

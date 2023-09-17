@@ -19,8 +19,8 @@ noindex = false
 
 [params.theme]
 #palette = ""
+#palette = "black-metal-venom"
 palette = "black-metal-venom"
-#palette = "gruvbox-dark"
 
 #Sidebar: about/bio
 [params.about]
