@@ -4,8 +4,8 @@ draft: false
 tags: [""]
 ---
 
-just some stuff i've been working on in my free time.
-if you want to take a look at the source code, you can check out [my github](https://github.com/zakar98k) repos.
+A showcase of some of the things I've been working on in my free time.
+Check out [my github](https://github.com/zakar98k?tab=repositories) for the source code of all my publicly listed repositories.
 
 # Space Pirate April (WIP)
 
