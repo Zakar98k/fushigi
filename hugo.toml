@@ -1,8 +1,8 @@
 baseURL = "https://examplesite.com"
 theme = "risotto"
-title = "Return Values"
+title = "Komorebi"
 author = "Zach Quita"
-copyright = "© [Return Values](/) site by [Zach Quita](https://www.youtube.com/watch?v=3Xdo0MVZcSo)"
+copyright = "© [Komorebi](/) site by [Zach Quita](https://www.youtube.com/watch?v=3Xdo0MVZcSo)"
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -24,7 +24,7 @@ palette = "black-metal-venom"
 
 #Sidebar: about/bio
 [params.about]
-title = "~/ Return Values"
+title = "~/ Komorebi"
 description = "A home for my thoughts, projects, and my current interests."
 #logo = "images/rice.svg"
 
