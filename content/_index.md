@@ -1,35 +1,14 @@
 > 🚀 You've just landed on my corner of the internet!
 
-- [About (if you're a bit confused)](/about)
-- [What I'm working on](/projects)
-- [What the dog doin](/posts)
-
-<style>
-  div.container { display: inline-block; user-select: none;}
-
-  p.text {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation:
-      typing 1.5s steps(15)
-  }
-
-  span.cursor {
-    animation: cursor .4s step-end infinite alternate;
-  }
-
-  @keyframes cursor {
-    50% { color: transparent; }
-  }
-
-  @keyframes typing {
-    from {
-      width: 0
-  }
-  }
-</style>
-
-<div class="container">
-    <p class="text">> komorebi init<span class=cursor>_</span></p>
+<div class=fakeMenu>
+  <div class="fakeButtons fakeClose"></div>
+  <div class="fakeButtons fakeMinimize"></div>
+  <div class="fakeButtons fakeZoom"></div>
+</div>
+<div class="fakeScreen">
+  <p class="line1">systemctl start Komorebi.service</p>
+  <p class="line2"><a href="/about">./about</a></p>
+  <p class="line3"><a href="/projects">./projects</a></p>
+  <p class="line4"><a href="/posts">./posts</a></p>
+  <p class="line5"></p>
 </div>
