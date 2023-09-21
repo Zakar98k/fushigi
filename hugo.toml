@@ -1,8 +1,8 @@
-baseURL = "https://examplesite.com"
+baseURL = "https://fushigi.netlify.app/"
 theme = "risotto"
-title = "Komorebi"
+title = "Fushigi"
 author = "Zach Quita"
-copyright = "© [Komorebi](/) site by [Zach Quita](https://www.youtube.com/watch?v=3Xdo0MVZcSo)"
+copyright = "© [Fushigi](/) site by [Zach Quita](https://www.youtube.com/watch?v=3Xdo0MVZcSo)"
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -20,11 +20,11 @@ noindex = false
 [params.theme]
 #palette = ""
 #palette = "black-metal-venom"
-palette = "black-metal-venom"
+palette = "gruvbox-light"
 
 #Sidebar: about/bio
 [params.about]
-title = "~/ Komorebi"
+title = "~/ Fushigi"
 description = "A home for my thoughts, projects, and my current interests."
 #logo = "images/rice.svg"
 
