@@ -108,10 +108,10 @@
 
 .fakeScreen a:hover,
 .fakeScreen a:active {
-  text-decoration: underline;
+  color: var(--base0A);
 }
 .fakeScreen a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--base08);
 }
 
