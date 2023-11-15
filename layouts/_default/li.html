@@ -1,1 +1,14 @@
-<li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+<!-- <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li> -->
+<article>
+  <!-- this <div> includes the title summary -->
+  <div>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ .Summary }}
+  </div>
+  {{ if .Truncated }}
+    <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+    <div>
+      <a href="{{ .RelPermalink }}">Read More…</a>
+    </div>
+  {{ end }}
+</article>

@@ -1,6 +1,8 @@
 ---
 title: "My First Post I Guess"
+author: "Zach Quita"
 date: 2023-09-01T16:33:56+08:00
+description: "I talk about the site and more. Mandatory first post for all personal websites."
 draft: false
 tags: ['hugo', 'updates', 'old-site']
 ---

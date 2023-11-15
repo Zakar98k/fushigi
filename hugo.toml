@@ -14,12 +14,12 @@ ignoreErrors = ["error-remote-getjson"]
 # Automatically add content sections to main menu
 sectionPagesMenu = "main"
 
+summaryLength = 15
+
 [params]
 noindex = false
 
 [params.theme]
-#palette = ""
-#palette = "black-metal-venom"
 palette = "mountain"
 
 #Sidebar: about/bio
