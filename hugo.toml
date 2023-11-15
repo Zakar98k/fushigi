@@ -20,7 +20,7 @@ noindex = false
 [params.theme]
 #palette = ""
 #palette = "black-metal-venom"
-palette = "gruvbox-light"
+palette = "rose-pine"
 
 #Sidebar: about/bio
 [params.about]

@@ -1,4 +1,19 @@
 /* Override this file to customise the theme's CSS for your site */
+
+  @font-face {
+    font-family: 'stranded';
+    src: local('strandedttf'),
+    url('./stranded-normal-normal-normal-8x16.ttf');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'beached';
+    src: local('beachedttf'),
+    url('./beached-normal-normal-normal-8x16.ttf');
+    font-weight: normal;
+}
+
 .fakeButtons {
   height: 10px;
   width: 10px;
@@ -40,6 +55,7 @@
 }
 
 .fakeScreen {
+  font-family: 'stranded';
   background-color: var(--bg);
   box-sizing: border-box;
   width: auto;
@@ -55,7 +71,6 @@
   /* margin-left: -8.5em; */
   text-align: left;
   font-size: 1em;
-  font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
@@ -145,14 +160,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 1rem !important;
-  font-weight: 700;
+  font-family: 'beached';
+  font-size: 16px !important;
+  font-weight: normal !important;
 }
 
 body {
-  font-size: 1rem !important;
+  font-size: 16px !important;
+}
+p strong {
+  font-family: 'beached';
+  font-weight: normal;
 }
 
 :root {
-  --font-monospace: "Victor Mono", VictorMono, monospace !important;
+  --font-monospace: 'stranded', monospace !important;
 }
