@@ -2,13 +2,10 @@
 <article>
   <!-- this <div> includes the title summary -->
   <div>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ .Summary }}
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><span> // {{ .Date | time.Format ":date_medium" }}</span></h2>
+    <p>
+      {{ .WordCount }} words, {{ .ReadingTime }} min read.
+    </p>
   </div>
-  {{ if .Truncated }}
-    <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-    <div>
-      <a href="{{ .RelPermalink }}">Read More…</a>
-    </div>
-  {{ end }}
+    {{ .Summary }}
 </article>
