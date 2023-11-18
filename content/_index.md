@@ -6,7 +6,7 @@
   <div class="fakeButtons fakeZoom"></div>
 </div>
 <div class="fakeScreen">
-  <p class="line1">systemctl start Fushigi.service</p>
+  <p class="line1">systemctl start --user Fushigi.service</p>
   <p class="line2"><a href="/about">./about</a></p>
   <p class="line3"><a href="/projects">./projects</a></p>
   <p class="line4"><a href="/posts">./posts</a></p>

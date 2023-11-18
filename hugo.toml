@@ -20,7 +20,7 @@ summaryLength = 15
 noindex = false
 
 [params.theme]
-palette = "mountain"
+palette = "stardust"
 
 #Sidebar: about/bio
 [params.about]

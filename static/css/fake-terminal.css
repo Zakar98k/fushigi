@@ -1,0 +1,141 @@
+/* <-- Fake Terminal's Css --> */
+.fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 3px;
+  left: 6px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 11px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 16px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu,
+.fakeScreen {
+  user-select: none;
+}
+
+.fakeMenu {
+  width: auto;
+  box-sizing: border-box;
+  height: 25px;
+  background-color: var(--inner-bg);
+  /* margin: 0 auto; */
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fakeScreen {
+  font-family: 'stranded';
+  background-color: var(--off-bg);
+  box-sizing: border-box;
+  width: auto;
+  /* margin: 0 auto; */
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.fakeScreen p {
+  position: relative;
+  /* left: 50%; */
+  /* margin-left: -8.5em; */
+  text-align: left;
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.fakeScreen span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.line1::before,
+.line5::before {
+  content: "$ ";
+}
+
+.line1 {
+  animation:
+    type 0.8s 0s steps(20, end) forwards,
+    blink 0.4s 0s step-end 3;
+  padding-right: 0px;
+  border-color: transparent;
+}
+
+.cursor1 {
+  animation: blink 0.5s 0.9s 1 forwards;
+}
+
+.line2 {
+  animation: type 0.5s 1.5s steps(20, end) forwards;
+}
+
+.cursor2 {
+  animation: blink 0.5s 2.2s infinite forwards;
+}
+
+.line3 {
+  animation: type 0.5s 1.8s steps(20, end) forwards;
+}
+
+.line4 {
+  animation: type 0.5s 2s steps(20, end) forwards;
+}
+
+.line5 {
+  animation:
+    type2 0s 2.2s steps(20, end) forwards,
+    blink 0.4s 2.2s step-end infinite;
+  border-color: transparent;
+}
+
+.fakeScreen a:hover,
+.fakeScreen a:active {
+  color: var(--base0A);
+}
+.fakeScreen a {
+  text-decoration: underline;
+  color: var(--base08);
+}
+
+@keyframes blink {
+  50% {
+    border-right: 8px solid var(--fg);
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+}
+
+@keyframes type {
+  to {
+    width: 20em;
+  }
+}
+
+@keyframes type2 {
+  to {
+    width: 1em;
+  }
+}
+
