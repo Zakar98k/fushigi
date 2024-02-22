@@ -1,7 +1,7 @@
 +++
 title = 'My First Post'
 date = 2024-02-22T19:01:20+08:00
-draft = true
+draft = false
 +++
 
 Yup, the mandatory first post for all personal websites, where the author talk about their experience in making it, blah blah
@@ -19,7 +19,7 @@ While I do like the ideas and the look and feel of my previous website, I also w
 ## About my projects
 > How are you spending time as someone who is currently learning programming/gamedev?
 
-I'm currently working on a few games and projects, namely my 2D space shooter, Space Pirate April. Bookmark my site or the project's Github repo if you want to stay updated. (I might be able to get RSS working in the future so stay tuned for that as well)
+I'm currently working on a game for my final project for CS50 (yes long overdue). The game concept being a platformer version of dark-souls. Definitely keep an eye out for that.
 
 That is all
 

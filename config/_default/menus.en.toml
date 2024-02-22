@@ -11,28 +11,52 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
+pre = "circle-info"
 name = "About"
-# pageRef = "about"
-url = "/about"
+pageRef = "about"
+# url = "/about"
 weight = 10
 
 [[main]]
-name = "Blog"
-# pageRef = "posts"
-url = "/posts"
+pre = "code"
+name = "Projects"
+pageRef = "projects"
 weight = 20
 
-[[subnavigation]]
-pre = "tag"
+[[main]]
+pre = "list"
+name = "Blog"
+pageRef = "posts"
+# url = "/posts"
+weight = 30
+
+[[main]]
+name = "Content"
+weight = 40
+
+[[main]]
+parent = "Content"
 name = "Tags"
 pageRef = "tags"
 weight = 10
 
-[[subnavigation]]
-pre = "list"
+[[main]]
+parent = "Content"
 name = "Categories"
 pageRef = "categories"
-weight = 20
+weight = 10
+
+# [[subnavigation]]
+# pre = "tag"
+# name = "Tags"
+# pageRef = "tags"
+# weight = 10
+
+# [[subnavigation]]
+# pre = "list"
+# name = "Categories"
+# pageRef = "categories"
+# weight = 20
 
 
 # -- Footer Menu --
@@ -40,12 +64,12 @@ weight = 20
 # the copyright notice. Configure as per the main menu above.
 
 
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 10
 
-# [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 20
+[[footer]]
+  name = "Categories"
+  pageRef = "categories"
+  weight = 20
