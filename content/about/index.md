@@ -5,5 +5,5 @@ draft = false
 layout = 'single'
 +++
 
-### Self-introduction
+### print("hello world")
 Hi, I’m Zach. I’m a highschool student who loves coding, gamedev, and Linux. Some of my other interests are metal music, movies & anime, and pixel-art, and 日本語 (Nihongo).
