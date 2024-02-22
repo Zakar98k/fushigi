@@ -1,0 +1,23 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Fushigi"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+description = "Zach's personal website"
+
+[author]
+name = "Zach // ザック"
+headline = "I’m a senior-high student who daily drives Linux and codes stuff during my free time."
+bio = "I’m a senior-high student who daily drives Linux and codes stuff during my free time."
+image = "avatar.jpg"
+links = [
+    { email = "mailto:zachquita@gmail.com" }, 
+    { github = "https://github.com/zakar98k" },
+    { linkedin = "https://www.linkedin.com/in/zachquita" },
+    { instagram = "https://www.instagram.com/zakar98k/" },
+]

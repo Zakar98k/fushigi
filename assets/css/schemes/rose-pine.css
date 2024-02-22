@@ -1,0 +1,33 @@
+/* Rose Pine theme ported to tailwind */
+:root { --color-neutral: 224,222,224;
+--color-neutral-50:     224,222,224;
+--color-neutral-100:    144,140,170;
+--color-neutral-200:    110,106,134;
+--color-neutral-300:    137,132,164;
+--color-neutral-400:    82,79,103;
+--color-neutral-500:    64,61,82;
+--color-neutral-600:    38,35,58;
+--color-neutral-700:    33,32,46;
+--color-neutral-800:    20,18,31;
+--color-neutral-900:    31,29,46;
+--color-primary-50:     255,255,255;
+--color-primary-100:    255,255,255;
+--color-primary-200:    255,255,255;
+--color-primary-300:    254,245,248;
+--color-primary-400:    244,178,197;
+--color-primary-500:    235,111,146;
+--color-primary-600:    230,75,119;
+--color-primary-700:    225,39,92;
+--color-primary-800:    196,27,75;
+--color-primary-900:    161,22,61;
+--color-secondary-50:     255,255,255;
+--color-secondary-100:    246,250,252;
+--color-secondary-200:    189,220,232;
+--color-secondary-300:    132,190,213;
+--color-secondary-400:    75,159,193;
+--color-secondary-500:    49,116,143;
+--color-secondary-600:    39,91,113;
+--color-secondary-700:    28,67,82;
+--color-secondary-800:    18,42,52;
+--color-secondary-900:    7,17,21;
+}
