@@ -19,7 +19,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 # outputs.home = ["HTML", "RSS", "JSON"]
 
-defaultBackgroundImage = "pixel_town_crater.png" # used as default for background images 
+defaultBackgroundImage = "black_fabric.jpg" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
