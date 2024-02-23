@@ -8,7 +8,8 @@ layout = 'single'
 ## print("hello world")
 Hey there 👋. I’m Zach. 
 
-I’m a (soon-graduating) highschool student who loves coding, gamedev, and programming. I don’t usually have to worry about what to do during free-time, because I have so much hobbies. Some of these are:
+I’m a (soon-graduating) highschool student who loves coding, gamedev, and programming. 
+I'm the type of person who doesn’t really have to worry about what to do during free-time, since I have plenty of hobbies. Some of these are:
 
 {{< keywordList >}}
 {{< keyword >}} Game-Development {{< /keyword >}}
