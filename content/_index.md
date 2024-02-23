@@ -1,7 +1,7 @@
 +++
 title = "Homepage"
 +++
-<div class="font-semibold text-neutral-800 dark:text-primary-400 text-xl">
+<div class="italic font-semibold text-neutral-800 dark:text-primary-400 text-xl">
 {{< typeit 
   speed=80
   lifeLike=true
