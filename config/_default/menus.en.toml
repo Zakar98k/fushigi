@@ -11,20 +11,20 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-pre = "circle-info"
+# pre = "circle-info"
 name = "About"
 pageRef = "about"
 # url = "/about"
 weight = 10
 
 [[main]]
-pre = "code"
+# pre = "code"
 name = "Projects"
 pageRef = "projects"
 weight = 20
 
 [[main]]
-pre = "list"
+# pre = "list"
 name = "Blog"
 pageRef = "posts"
 # url = "/posts"
