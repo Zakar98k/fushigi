@@ -19,7 +19,7 @@ disableImageOptimization = false
 disableTextInHeader = false
 # outputs.home = ["HTML", "RSS", "JSON"]
 
-defaultBackgroundImage = "fuji.jpg" # used as default for background images 
+defaultBackgroundImage = "pixel_town_crater.png" # used as default for background images 
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
@@ -27,7 +27,7 @@ smartTOC = true
 smartTOCHideUnfocusedChildren = true
 
 [header]
-  layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
+  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
 
 [footer]
   showMenu = true
