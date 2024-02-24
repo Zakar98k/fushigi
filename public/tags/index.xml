@@ -7,6 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Zach // ザカール</copyright>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Feb 2024 18:38:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Thu, 22 Feb 2024 18:38:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Me</title>
+      <link>http://localhost:1313/tags/me/</link>
+      <pubDate>Thu, 22 Feb 2024 18:38:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/me/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

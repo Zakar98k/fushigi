@@ -19,8 +19,10 @@ disableImageOptimization = false
 disableTextInHeader = false
 # outputs.home = ["HTML", "RSS", "JSON"]
 
+disableImageZoom = false
+
 defaultBackgroundImage = "black_fabric.jpg" # used as default for background images 
-# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
+defaultFeaturedImage = "mocha_waves.png" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
 smartTOC = true

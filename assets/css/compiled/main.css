@@ -1741,7 +1741,9 @@ select {
 }
 
 .min-h-\[148px\] {
-  min-height:10%
+  /* min-height:10% */
+  min-height:14%
+  /* min-height: 148px; */
 }
 
 .min-h-full {

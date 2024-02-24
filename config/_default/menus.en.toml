@@ -72,4 +72,24 @@ weight = 10
 [[footer]]
   name = "Categories"
   pageRef = "categories"
-  weight = 20
+  weight = 15
+
+[[footer]]
+# pre = "circle-info"
+name = "About"
+pageRef = "about"
+# url = "/about"
+weight = 18
+
+[[footer]]
+# pre = "code"
+name = "Projects"
+pageRef = "projects"
+weight = 20
+
+[[footer]]
+# pre = "list"
+name = "Blog"
+pageRef = "posts"
+# url = "/posts"
+weight = 30
