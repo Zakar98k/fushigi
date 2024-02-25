@@ -8,7 +8,7 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-description = "Zach's personal website"
+description = "A personal website to host my blog, projects, and more. Powered by Hugo."
 
 [author]
 name = "Zach // ザカール"
