@@ -9,7 +9,7 @@ colorScheme = "rose-pine"
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
 
-enableSearch = false
+enableSearch = true
 enableCodeCopy = true
 
 # mainSections = ["blog"]

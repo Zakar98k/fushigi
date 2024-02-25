@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>People on Fushigi</title>
+    <link>http://localhost:1313/tags/people/</link>
+    <description>Recent content in People on Fushigi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Zach // ザカール</copyright>
+    <lastBuildDate>Thu, 22 Feb 2024 18:38:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/people/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 22 Feb 2024 18:38:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>print(&amp;ldquo;hello world&amp;rdquo;) # Hey there 👋.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 +++
 title = 'About Me'
 date = 2024-02-22T18:38:13+08:00
-draft = true
+draft = false
 layout = 'single'
-tags = ["hugo", "me"]
+tags = ["hugo", "people"]
 +++
 
 ## print("hello world")
@@ -14,6 +14,7 @@ I'm the type of person who doesn’t really have to worry about what to do with 
 
 {{< keywordList >}}
 {{< keyword >}} Game-Development {{< /keyword >}}
+{{< keyword >}} Enjoying a good movie {{< /keyword >}}
 {{< keyword >}} Ricing {{< /keyword >}}
 {{< keyword >}} Guilty Gear & Tekken {{< /keyword >}}
 {{< keyword >}} Studying Japanese {{< /keyword >}}
