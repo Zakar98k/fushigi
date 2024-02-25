@@ -93,3 +93,10 @@ name = "Blog"
 pageRef = "posts"
 # url = "/posts"
 weight = 30
+
+[[footer]]
+pre = "github"
+name = "Site-Repository"
+# pageRef = "posts"
+url = "https://github.com/zakar98k/fushigi"
+weight = 40

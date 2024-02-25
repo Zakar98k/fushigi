@@ -21,6 +21,11 @@ While I do like the ideas and the look and feel of my previous website, I also w
 
 I'd say not too difficult, as long as you know how the basics work (HTML, CSS, domains). A lot of information is available online on how to get sites up and running with different services (GitHub Pages, Netlify, Vercel, and others)
 
+You can view the GitHub repo for the site here:
+
+{{< github repo="zakar98k/fushigi" >}}
+
+
 ## About my projects
 > How are you spending time as someone who is currently learning programming/gamedev?
 
