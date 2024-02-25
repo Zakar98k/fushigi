@@ -1,7 +1,7 @@
 +++
 title = 'Instant Gratification, Overstimulation, and Brainrot'
 date = 2024-02-25T08:54:58+08:00
-draft = true
+draft = false
 tags = ["self-improvement"]
 +++
 
