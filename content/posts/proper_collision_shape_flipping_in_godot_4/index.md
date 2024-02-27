@@ -10,6 +10,9 @@ I made a Youtube Tutorial on how to implement a *Hitbox Flipping* mechanic in Go
 
 {{< youtube id="lHC3YqYB9mI" title="Proper Collision Shape Flipping in Godot 4 | Godot Intermediate Level Tutorial" >}}
 
+A GitHub repository for this project is also available:
+{{< github repo="Zakar98k/godot-hitbox-flipping" >}}
+
 ## Implementation
 I used a **composition-based** approach to implement the Hitbox Flipping. By utilizing composition, we're able to define scenes called **"components"**, that we will later be able to reuse in other scenes: the player scene, any enemy scene, or even traps that need to be flipped.
 
@@ -43,3 +46,29 @@ In the script, we define a new signal called `sprite_flipped(flip_value)`. This 
 In our setter function, we set the value of the variable `flipped` to the new flip value, and we also set the value of `Sprite2D`'s property `flip_h` to the new flip value
 
 ### Flippable Collision Shape Component
+> This component will listen to the signal `sprite_flipped(flipped_value)` that we defined earlier in [Flippable Sprite Component]({{% relref "index.md#flippable-sprite-component" %}})
+
+Make a new scene with the root node being a `CollisionShape2D`. Rename the `CollisionShape2D` to `FlippableShape`. Save the scene anywhere as `flippable_shape.tscn`.
+
+> The `FlippableShape` node will throw 2 errors. Ignore them, as we'll resolve these errors later on by initializing this scene as a child of a parent HitboxComponent scene and giving it a shape.
+
+Attach a script to your newly renamed `FlippableShape` node. Save it anywhere as `flippable_shape.gd`
+
+```gdscript
+# flippable_shape.gd
+
+extends CollisionShape2D
+class_name FlippableShape
+
+@export var default_position: Vector2:
+	set(new_position):
+		default_position = new_position
+		position = new_position
+
+var current_flip_value: bool
+
+func _on_sprite_flipped(flip_value):
+	if current_flip_value != flip_value:
+		default_position.x *= -1
+		current_flip_value = flip_value
+```
