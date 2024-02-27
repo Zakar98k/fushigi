@@ -72,3 +72,53 @@ func _on_sprite_flipped(flip_value):
 		default_position.x *= -1
 		current_flip_value = flip_value
 ```
+
+Our function `_on_sprite_flipped(flip_value)` will be called everytime the signal `sprite_flipped(flip_value)` is emitted.
+
+To get the flip, we multiply `default_position.x` by `-1`, this mirrors the position to the other side. 
+
+> For example, let's say `default_position.x` is `20`. By doing `default_position.x *= -1`, `20` becomes `-20`; it flips as a result.
+
+### Hitbox Component
+> This component will serve to connect the `sprite_flipped` signal from our [Flippable Sprite Component]({{% relref "index.md#flippable-sprite-component" %}}) to the function `_on_sprite_flipped(flip_value)` that will flip the [Flippable Shape Component]({{% relref "index.md#flippable-collision-shape-component" %}})
+
+
+Make a new scene with the root node being a `Area2D`. Rename the `Area2D` to `HitboxComponent`. Save the scene anywhere as `hitbox_component.tscn`.
+
+
+Attach a script to your newly renamed `HitboxComponent` node. Save it anywhere as `hitbox_component.gd`
+
+```gdscript
+# hitbox_component.gd
+
+extends Area2D
+class_name HitboxComponent
+
+@export var flippable_sprite: FlippableSprite
+
+func _ready():
+	if flippable_sprite != null:
+		for child in get_children():
+			flippable_sprite.sprite_flipped.connect(child._on_sprite_flipped)
+			child.disabled = true
+```
+
+> Don't forget to set a FlippableSprite for the `flippable_sprite` export var that we defined
+
+we set `child.disabled = true` so that we don't have an active hitbox when the parent scene is added to the scene tree. For example: we don't want the player starting off with an active hitbox even though we haven't pressed the attack button.
+
+You can then connect `HitboxComponent`'s `body_entered(body: Node2D)` signal to a function that deals damage to any class that can take damage, like the player, enemy, or breakable items like pots.
+
+## Usage
+Any scene that you want to have *hitbox flipping* should have the 3 scenes defined above as its children: 
+[FlippableSprite]({{% relref "index.md#flippable-sprite-component" %}}), 
+[FlippableShape]({{% relref "index.md#flippable-collision-shape-component" %}}), 
+and [HitboxComponent]({{% relref "index.md#hitbox-component" %}})
+
+An example implementation:
+
+![Sample Player Scene](sample_player_scene.png)
+
+> Don't forget to set a `FlippableSprite` node for the `flippable_sprite` export var that we defined
+
+> Don't forget to set a `shape` and `default_position`
