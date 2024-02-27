@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Godot on Fushigi</title>
+    <link>http://localhost:1313/tags/godot/</link>
+    <description>Recent content in Godot on Fushigi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Zach // ザカール</copyright>
+    <lastBuildDate>Tue, 27 Feb 2024 10:42:13 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/godot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proper Collision Shape Flipping in Godot 4</title>
+      <link>http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/</link>
+      <pubDate>Tue, 27 Feb 2024 10:42:13 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/</guid>
+      <description>I made a Youtube Tutorial on how to implement a Hitbox Flipping mechanic in Godot.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
