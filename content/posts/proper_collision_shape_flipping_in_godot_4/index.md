@@ -1,7 +1,7 @@
 +++
 title = 'Proper Collision Shape Flipping in Godot 4'
 date = 2024-02-27T10:42:13+08:00
-draft = true
+draft = false
 tags = ["godot","game-development"]
 categories = ["tutorial", "youtube-video"]
 +++
