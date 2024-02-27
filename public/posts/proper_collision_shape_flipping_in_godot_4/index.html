@@ -28,8 +28,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.301ff30e8bbfbfccbefaa602a40ecd6ad08ac13e09a295dff3da6003d8a229544011e95691bb015575ee6026ae5826991449e896068932e4ee741fc7c021ac60.css"
-    integrity="sha512-MB/zDou/v8y&#43;&#43;qYCpA7NatCKwT4JopXf89pgA9iiKVRAEelWkbsBVXXuYCauWCaZFEnolgaJMuTudB/HwCGsYA==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.82e9b91756577bea4275b18fc3b8902cb04cc0a605184f01919edf38d83e91d58c5b8698ed0be172573caf6e393f2df3a45ceb0db488b77f5f939bc641ae7abf.css"
+    integrity="sha512-gum5F1ZXe&#43;pCdbGPw7iQLLBMwKYFGE8BkZ7fONg&#43;kdWMW4aY7Qvhclc8r245Py3zpFzrDbSIt39fk5vGQa56vw==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -102,7 +102,7 @@
     "keywords": ["godot","game-development"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "394"
+    "wordCount": "698"
   }]
   </script>
 
@@ -612,7 +612,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-02-27 10:42:13 &#43;0800 PST">27 February 2024</time><span class="px-2 text-primary-500">&middot;</span><span>394 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-02-27 10:42:13 &#43;0800 PST">27 February 2024</time><span class="px-2 text-primary-500">&middot;</span><span>698 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.16f2e42a0014d476212e14c056b26b69bc85cb5de15352a5e3a1a0be498055dc1bf0926cef44baef1cc7fa2dfc5de0052892645cd3766598065f47b15c4bd44d.js" integrity="sha512-FvLkKgAU1HYhLhTAVrJrabyFy13hU1Kl46GgvkmAVdwb8JJs70S67xzH&#43;i38XeAFKJJkXNN2ZZgGX0exXEvUTQ=="></script>
@@ -881,8 +881,10 @@
       <ul>
         <li><a href="#flippable-sprite-component">Flippable Sprite Component</a></li>
         <li><a href="#flippable-collision-shape-component">Flippable Collision Shape Component</a></li>
+        <li><a href="#hitbox-component">Hitbox Component</a></li>
       </ul>
     </li>
+    <li><a href="#usage">Usage</a></li>
   </ul>
 </nav>
   </div>
@@ -900,8 +902,10 @@
       <ul>
         <li><a href="#flippable-sprite-component">Flippable Sprite Component</a></li>
         <li><a href="#flippable-collision-shape-component">Flippable Collision Shape Component</a></li>
+        <li><a href="#hitbox-component">Hitbox Component</a></li>
       </ul>
     </li>
+    <li><a href="#usage">Usage</a></li>
   </ul>
 </nav>
   </div>
@@ -1131,7 +1135,189 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">current_flip_value</span> <span class="o">!=</span> <span class="n">flip_value</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">		<span class="n">default_position</span><span class="o">.</span><span class="n">x</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">		<span class="n">current_flip_value</span> <span class="o">=</span> <span class="n">flip_value</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>Our function <code>_on_sprite_flipped(flip_value)</code> will be called everytime the signal <code>sprite_flipped(flip_value)</code> is emitted.</p>
+<p>To get the flip, we multiply <code>default_position.x</code> by <code>-1</code>, this mirrors the position to the other side.</p>
+<blockquote>
+<p>For example, let&rsquo;s say <code>default_position.x</code> is <code>20</code>. By doing <code>default_position.x *= -1</code>, <code>20</code> becomes <code>-20</code>; it flips as a result.</p>
+</blockquote>
+
+
+<h3 class="relative group">Hitbox Component 
+    <div id="hitbox-component" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hitbox-component" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>This component will serve to connect the <code>sprite_flipped</code> signal from our <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-sprite-component"  >
+    Flippable Sprite Component</a> to the function <code>_on_sprite_flipped(flip_value)</code> that will flip the <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+    Flippable Shape Component</a></p>
+</blockquote>
+<p>Make a new scene with the root node being a <code>Area2D</code>. Rename the <code>Area2D</code> to <code>HitboxComponent</code>. Save the scene anywhere as <code>hitbox_component.tscn</code>.</p>
+<p>Attach a script to your newly renamed <code>HitboxComponent</code> node. Save it anywhere as <code>hitbox_component.gd</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="c1"># hitbox_component.gd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Area2D</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class_name</span> <span class="nc">HitboxComponent</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@export</span> <span class="kd">var</span> <span class="n">flippable_sprite</span><span class="p">:</span> <span class="n">FlippableSprite</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">flippable_sprite</span> <span class="o">!=</span> <span class="kt">null</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="nf">get_children</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">			<span class="n">flippable_sprite</span><span class="o">.</span><span class="n">sprite_flipped</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">_on_sprite_flipped</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">child</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span></code></pre></div><blockquote>
+<p>Don&rsquo;t forget to set a FlippableSprite for the <code>flippable_sprite</code> export var that we defined</p>
+</blockquote>
+<p>we set <code>child.disabled = true</code> so that we don&rsquo;t have an active hitbox when the parent scene is added to the scene tree. For example: we don&rsquo;t want the player starting off with an active hitbox even though we haven&rsquo;t pressed the attack button.</p>
+<p>You can then connect <code>HitboxComponent</code>&rsquo;s <code>body_entered(body: Node2D)</code> signal to a function that deals damage to any class that can take damage, like the player, enemy, or breakable items like pots.</p>
+
+
+<h2 class="relative group">Usage 
+    <div id="usage" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#usage" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Any scene that you want to have <em>hitbox flipping</em> should have the 3 scenes defined above as its children:
+<a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-sprite-component"  >
+    FlippableSprite</a>,
+<a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+    FlippableShape</a>,
+and <a href="/posts/proper_collision_shape_flipping_in_godot_4/#hitbox-component"  >
+    HitboxComponent</a></p>
+<p>An example implementation:</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/proper_collision_shape_flipping_in_godot_4/sample_player_scene_hu2c1e8bb5f716e8ab5f12b8022cba4379_21640_330x0_resize_box_3.png 330w,
+        /posts/proper_collision_shape_flipping_in_godot_4/sample_player_scene_hu2c1e8bb5f716e8ab5f12b8022cba4379_21640_660x0_resize_box_3.png 660w,
+        /posts/proper_collision_shape_flipping_in_godot_4/sample_player_scene_hu2c1e8bb5f716e8ab5f12b8022cba4379_21640_1024x0_resize_box_3.png 1024w,
+        /posts/proper_collision_shape_flipping_in_godot_4/sample_player_scene_hu2c1e8bb5f716e8ab5f12b8022cba4379_21640_1320x0_resize_box_3.png 2x"
+        src="/posts/proper_collision_shape_flipping_in_godot_4/sample_player_scene_hu2c1e8bb5f716e8ab5f12b8022cba4379_21640_660x0_resize_box_3.png"
+        alt="Sample Player Scene"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>Don&rsquo;t forget to set a <code>FlippableSprite</code> node for the <code>flippable_sprite</code> export var that we defined in <code>HitboxComponent</code>:</p>
+</blockquote>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/proper_collision_shape_flipping_in_godot_4/hitbox_component_exports_hubb40a37c7e3d46109878d3322fd4e3bf_15389_330x0_resize_box_3.png 330w,
+        /posts/proper_collision_shape_flipping_in_godot_4/hitbox_component_exports_hubb40a37c7e3d46109878d3322fd4e3bf_15389_660x0_resize_box_3.png 660w,
+        /posts/proper_collision_shape_flipping_in_godot_4/hitbox_component_exports_hubb40a37c7e3d46109878d3322fd4e3bf_15389_1024x0_resize_box_3.png 1024w,
+        /posts/proper_collision_shape_flipping_in_godot_4/hitbox_component_exports_hubb40a37c7e3d46109878d3322fd4e3bf_15389_1320x0_resize_box_3.png 2x"
+        src="/posts/proper_collision_shape_flipping_in_godot_4/hitbox_component_exports_hubb40a37c7e3d46109878d3322fd4e3bf_15389_660x0_resize_box_3.png"
+        alt="Hitbox Component Exports"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>Don&rsquo;t forget to set a <code>shape</code> and <code>default_position</code> for your <code>FlippableShape</code>:</p>
+</blockquote>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/proper_collision_shape_flipping_in_godot_4/flippable_shape_exports_hu34341960cbe16bbc0ed99e61a44d4a2f_27393_330x0_resize_box_3.png 330w,
+        /posts/proper_collision_shape_flipping_in_godot_4/flippable_shape_exports_hu34341960cbe16bbc0ed99e61a44d4a2f_27393_660x0_resize_box_3.png 660w,
+        /posts/proper_collision_shape_flipping_in_godot_4/flippable_shape_exports_hu34341960cbe16bbc0ed99e61a44d4a2f_27393_1024x0_resize_box_3.png 1024w,
+        /posts/proper_collision_shape_flipping_in_godot_4/flippable_shape_exports_hu34341960cbe16bbc0ed99e61a44d4a2f_27393_1320x0_resize_box_3.png 2x"
+        src="/posts/proper_collision_shape_flipping_in_godot_4/flippable_shape_exports_hu34341960cbe16bbc0ed99e61a44d4a2f_27393_660x0_resize_box_3.png"
+        alt="Flippable Shape Exports"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>Don&rsquo;t forget to set <code>FlippableShape</code>&rsquo;s <code>disabled</code> property to <code>true</code> during the active frames, and <code>false</code> during the inactive frames of your attack animation.</p>
+</blockquote>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/proper_collision_shape_flipping_in_godot_4/attack_animation_hu7a2f211f3ee1e916a0b3335a9154a1e5_739386_330x0_resize_box_1.gif 330w,
+        /posts/proper_collision_shape_flipping_in_godot_4/attack_animation_hu7a2f211f3ee1e916a0b3335a9154a1e5_739386_660x0_resize_box_1.gif 660w,
+        /posts/proper_collision_shape_flipping_in_godot_4/attack_animation_hu7a2f211f3ee1e916a0b3335a9154a1e5_739386_1024x0_resize_box_1.gif 1024w,
+        /posts/proper_collision_shape_flipping_in_godot_4/attack_animation_hu7a2f211f3ee1e916a0b3335a9154a1e5_739386_1320x0_resize_box_1.gif 2x"
+        src="/posts/proper_collision_shape_flipping_in_godot_4/attack_animation_hu7a2f211f3ee1e916a0b3335a9154a1e5_739386_660x0_resize_box_1.gif"
+        alt="Attack Animation"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+
         </div>
                 
         
@@ -1143,7 +1329,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;title=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title="Share on LinkedIn"
       aria-label="Share on LinkedIn"
@@ -1162,7 +1348,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://twitter.com/intent/tweet/?url=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;text=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
@@ -1180,7 +1366,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://reddit.com/submit/?url=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;resubmit=true&amp;title=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title="Submit to Reddit"
       aria-label="Submit to Reddit"
@@ -1199,26 +1385,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;description=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
-      title="Pin on Pinterest"
-      aria-label="Pin on Pinterest"
-      >
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
-
-  </span>
-
-
-    </a>
-      
-    
-      
-      <a
-      target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;quote=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title="Share on Facebook"
       aria-label="Share on Facebook"
@@ -1237,7 +1404,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="mailto:?body=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;subject=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title="Send via email"
       aria-label="Send via email"
@@ -1256,7 +1423,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://api.whatsapp.com/send?text=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;resubmit=true&amp;title=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title=""
       aria-label=""
@@ -1275,7 +1442,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
       
       <a
       target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      class="m-1 rounded bg-neutral-400 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
       href="https://t.me/share/url?url=http://localhost:1313/posts/proper_collision_shape_flipping_in_godot_4/&amp;resubmit=true&amp;title=Proper%20Collision%20Shape%20Flipping%20in%20Godot%204"
       title=""
       aria-label=""

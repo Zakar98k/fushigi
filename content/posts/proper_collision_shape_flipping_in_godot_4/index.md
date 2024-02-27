@@ -119,6 +119,14 @@ An example implementation:
 
 ![Sample Player Scene](sample_player_scene.png)
 
-> Don't forget to set a `FlippableSprite` node for the `flippable_sprite` export var that we defined
+> Don't forget to set a `FlippableSprite` node for the `flippable_sprite` export var that we defined in `HitboxComponent`:
 
-> Don't forget to set a `shape` and `default_position`
+![Hitbox Component Exports](hitbox_component_exports.png)
+
+> Don't forget to set a `shape` and `default_position` for your `FlippableShape`:
+
+![Flippable Shape Exports](flippable_shape_exports.png)
+
+> Don't forget to set `FlippableShape`'s `disabled` property to `true` during the active frames, and `false` during the inactive frames of your attack animation.
+
+![Attack Animation](attack_animation.gif)
