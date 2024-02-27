@@ -102,7 +102,7 @@
     "keywords": ["godot","game-development"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "19"
+    "wordCount": "255"
   }]
   </script>
 
@@ -612,7 +612,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-02-27 10:42:13 &#43;0800 PST">27 February 2024</time><span class="px-2 text-primary-500">&middot;</span><span>19 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-02-27 10:42:13 &#43;0800 PST">27 February 2024</time><span class="px-2 text-primary-500">&middot;</span><span>255 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.16f2e42a0014d476212e14c056b26b69bc85cb5de15352a5e3a1a0be498055dc1bf0926cef44baef1cc7fa2dfc5de0052892645cd3766598065f47b15c4bd44d.js" integrity="sha512-FvLkKgAU1HYhLhTAVrJrabyFy13hU1Kl46GgvkmAVdwb8JJs70S67xzH&#43;i38XeAFKJJkXNN2ZZgGX0exXEvUTQ=="></script>
@@ -830,6 +830,69 @@
   <iframe src="https://www.youtube.com/embed/lHC3YqYB9mI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="Proper Collision Shape Flipping in Godot 4 | Godot Intermediate Level Tutorial"></iframe>
 </div>
 
+
+
+<h2 class="relative group">Implementation 
+    <div id="implementation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#implementation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>I used a <strong>composition-based</strong> approach to implement the Hitbox Flipping. By utilizing composition, we&rsquo;re able to define scenes called <strong>&ldquo;components&rdquo;</strong>, that we will later be able to reuse in other scenes: the player scene, any enemy scene, or even traps that need to be flipped.</p>
+<blockquote>
+<p>To implement <em>Hitbox Flipping</em>, we need to define 3 new scenes, each with one node only.</p>
+</blockquote>
+
+
+<h3 class="relative group">Flippable Sprite Component 
+    <div id="flippable-sprite-component" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#flippable-sprite-component" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>The job of this component is to notify any <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+    Flippable Collision Shapes</a>
+whenever the sprite is flipped, so that the Flippable Collision Shapes can update their positions and flip as well.</p>
+</blockquote>
+<p>Make a new scene with the root node being a <code>Sprite2D</code>. Rename the <code>Sprite2D</code> to <code>FlippableSprite</code>. Save the scene anywhere as <code>flippable_sprite.tscn</code></p>
+<p>Attach a script to your newly renamed <code>FlippableSprite</code> node. Save it anywhere as <code>flippable_sprite.gd</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="c1"># flippable_sprite.gd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Sprite2D</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class_name</span> <span class="nc">FlippableSprite</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">signal</span> <span class="nf">sprite_flipped</span><span class="p">(</span><span class="n">flip_value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">flipped</span><span class="p">:</span> <span class="kt">bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">set</span><span class="p">(</span><span class="n">new_value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="n">new_value</span> <span class="o">!=</span> <span class="n">flipped</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">flipped</span> <span class="o">=</span> <span class="n">new_value</span>
+</span></span><span class="line"><span class="cl">			<span class="n">flip_h</span> <span class="o">=</span> <span class="n">flipped</span>
+</span></span><span class="line"><span class="cl">			<span class="n">sprite_flipped</span><span class="o">.</span><span class="nf">emit</span><span class="p">(</span><span class="n">new_value</span><span class="p">)</span>
+</span></span></code></pre></div><p>In the script, we define a new signal called <code>sprite_flipped(flip_value)</code>. This signal will be emitted in our setter function, <code>set(new_value)</code>, whenever the value of our variable <code>flipped</code> is set. (you can read more about Godot 4 setters and getters <a href="https://shaggydev.com/2022/01/04/setget/"   target="_blank">
+    here</a>)</p>
+<p>In our setter function, we set the value of the variable <code>flipped</code> to the new flip value, and we also set the value of <code>Sprite2D</code>&rsquo;s property <code>flip_h</code> to the new flip value</p>
+
+
+<h3 class="relative group">Flippable Collision Shape Component 
+    <div id="flippable-collision-shape-component" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#flippable-collision-shape-component" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
 
         </div>
                 
