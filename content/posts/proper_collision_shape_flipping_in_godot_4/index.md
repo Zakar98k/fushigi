@@ -19,7 +19,7 @@ I used a **composition-based** approach to implement the Hitbox Flipping. By uti
 > To implement *Hitbox Flipping*, we need to define 3 new scenes, each with one node only.
 
 ### Flippable Sprite Component
-> The job of this component is to notify any [Flippable Collision Shapes]({{% relref "index.md#flippable-collision-shape-component" %}})
+> The job of this component is to notify any [Flippable Collision Shapes]({{% relref "#flippable-collision-shape-component" %}})
 whenever the sprite is flipped, so that the Flippable Collision Shapes can update their positions and flip as well.
 
 Make a new scene with the root node being a `Sprite2D`. Rename the `Sprite2D` to `FlippableSprite`. Save the scene anywhere as `flippable_sprite.tscn`
@@ -46,7 +46,7 @@ In the script, we define a new signal called `sprite_flipped(flip_value)`. This 
 In our setter function, we set the value of the variable `flipped` to the new flip value, and we also set the value of `Sprite2D`'s property `flip_h` to the new flip value
 
 ### Flippable Collision Shape Component
-> This component will listen to the signal `sprite_flipped(flipped_value)` that we defined earlier in [Flippable Sprite Component]({{% relref "index.md#flippable-sprite-component" %}})
+> This component will listen to the signal `sprite_flipped(flipped_value)` that we defined earlier in [Flippable Sprite Component]({{% relref "#flippable-sprite-component" %}})
 
 Make a new scene with the root node being a `CollisionShape2D`. Rename the `CollisionShape2D` to `FlippableShape`. Save the scene anywhere as `flippable_shape.tscn`.
 
@@ -80,7 +80,7 @@ To get the flip, we multiply `default_position.x` by `-1`, this mirrors the posi
 > For example, let's say `default_position.x` is `20`. By doing `default_position.x *= -1`, `20` becomes `-20`; it flips as a result.
 
 ### Hitbox Component
-> This component will serve to connect the `sprite_flipped` signal from our [Flippable Sprite Component]({{% relref "index.md#flippable-sprite-component" %}}) to the function `_on_sprite_flipped(flip_value)` that will flip the [Flippable Shape Component]({{% relref "index.md#flippable-collision-shape-component" %}})
+> This component will serve to connect the `sprite_flipped` signal from our [Flippable Sprite Component]({{% relref "#flippable-sprite-component" %}}) to the function `_on_sprite_flipped(flip_value)` that will flip the [Flippable Shape Component]({{% relref "#flippable-collision-shape-component" %}})
 
 
 Make a new scene with the root node being a `Area2D`. Rename the `Area2D` to `HitboxComponent`. Save the scene anywhere as `hitbox_component.tscn`.
@@ -111,9 +111,9 @@ You can then connect `HitboxComponent`'s `body_entered(body: Node2D)` signal to 
 
 ## Usage
 Any scene that you want to have *hitbox flipping* should have the 3 scenes defined above as its children: 
-[FlippableSprite]({{% relref "index.md#flippable-sprite-component" %}}), 
-[FlippableShape]({{% relref "index.md#flippable-collision-shape-component" %}}), 
-and [HitboxComponent]({{% relref "index.md#hitbox-component" %}})
+[FlippableSprite]({{% relref "#flippable-sprite-component" %}}), 
+[FlippableShape]({{% relref "#flippable-collision-shape-component" %}}), 
+and [HitboxComponent]({{% relref "#hitbox-component" %}})
 
 An example implementation:
 

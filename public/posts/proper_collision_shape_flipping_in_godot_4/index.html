@@ -1070,7 +1070,7 @@
     
 </h3>
 <blockquote>
-<p>The job of this component is to notify any <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+<p>The job of this component is to notify any <a href="#flippable-collision-shape-component"  >
     Flippable Collision Shapes</a>
 whenever the sprite is flipped, so that the Flippable Collision Shapes can update their positions and flip as well.</p>
 </blockquote>
@@ -1105,7 +1105,7 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
     
 </h3>
 <blockquote>
-<p>This component will listen to the signal <code>sprite_flipped(flipped_value)</code> that we defined earlier in <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-sprite-component"  >
+<p>This component will listen to the signal <code>sprite_flipped(flipped_value)</code> that we defined earlier in <a href="#flippable-sprite-component"  >
     Flippable Sprite Component</a></p>
 </blockquote>
 <p>Make a new scene with the root node being a <code>CollisionShape2D</code>. Rename the <code>CollisionShape2D</code> to <code>FlippableShape</code>. Save the scene anywhere as <code>flippable_shape.tscn</code>.</p>
@@ -1147,8 +1147,8 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
     
 </h3>
 <blockquote>
-<p>This component will serve to connect the <code>sprite_flipped</code> signal from our <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-sprite-component"  >
-    Flippable Sprite Component</a> to the function <code>_on_sprite_flipped(flip_value)</code> that will flip the <a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+<p>This component will serve to connect the <code>sprite_flipped</code> signal from our <a href="#flippable-sprite-component"  >
+    Flippable Sprite Component</a> to the function <code>_on_sprite_flipped(flip_value)</code> that will flip the <a href="#flippable-collision-shape-component"  >
     Flippable Shape Component</a></p>
 </blockquote>
 <p>Make a new scene with the root node being a <code>Area2D</code>. Rename the <code>Area2D</code> to <code>HitboxComponent</code>. Save the scene anywhere as <code>hitbox_component.tscn</code>.</p>
@@ -1183,11 +1183,11 @@ whenever the sprite is flipped, so that the Flippable Collision Shapes can updat
     
 </h2>
 <p>Any scene that you want to have <em>hitbox flipping</em> should have the 3 scenes defined above as its children:
-<a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-sprite-component"  >
+<a href="#flippable-sprite-component"  >
     FlippableSprite</a>,
-<a href="/posts/proper_collision_shape_flipping_in_godot_4/#flippable-collision-shape-component"  >
+<a href="#flippable-collision-shape-component"  >
     FlippableShape</a>,
-and <a href="/posts/proper_collision_shape_flipping_in_godot_4/#hitbox-component"  >
+and <a href="#hitbox-component"  >
     HitboxComponent</a></p>
 <p>An example implementation:</p>
 <p>
