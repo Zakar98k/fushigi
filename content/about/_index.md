@@ -4,6 +4,7 @@ date = 2024-02-22T18:38:13+08:00
 draft = false
 layout = 'single'
 tags = ["hugo", "people"]
+showTableOfContents = false
 +++
 
 ## print("hello world")
