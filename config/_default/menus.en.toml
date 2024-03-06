@@ -31,17 +31,17 @@ pageRef = "posts"
 weight = 30
 
 [[main]]
-name = "Content"
+name = "Other"
 weight = 40
 
 [[main]]
-parent = "Content"
+parent = "Other"
 name = "Tags"
 pageRef = "tags"
 weight = 10
 
 [[main]]
-parent = "Content"
+parent = "Other"
 name = "Categories"
 pageRef = "categories"
 weight = 10
