@@ -16,3 +16,6 @@ Album Recommendations
 {{< /typeit >}}
 </div>
 -->
+
+<!-- {{< list title="Projects" cardView=true where="Type" value="projects" >}} -->
+

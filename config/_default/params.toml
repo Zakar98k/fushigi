@@ -12,7 +12,7 @@ autoSwitchAppearance = false
 enableSearch = true
 enableCodeCopy = true
 
-# mainSections = ["blog"]
+mainSections = ["projects"]
 # robots = ""
 
 disableImageOptimization = false
@@ -21,7 +21,7 @@ disableTextInHeader = false
 
 disableImageZoom = false
 
-defaultBackgroundImage = "black_fabric.jpg" # used as default for background images 
+# defaultBackgroundImage = "black_fabric.jpg" # used as default for background images 
 defaultFeaturedImage = "mocha_waves.png" # used as default for featured images in all articles
 
 highlightCurrentMenuArea = true
@@ -40,11 +40,11 @@ smartTOCHideUnfocusedChildren = false
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  # homepageImage = "pixel_town_crater.png" # used in: hero, and card
+  homepageImage = "black_fabric.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = false
-  showMoreLinkDest = "/posts"
+  showMoreLinkDest = "/projects"
   cardView = true
   cardViewScreenWidth = true
   layoutBackgroundBlur = false # only used when layout equals background
@@ -91,7 +91,7 @@ smartTOCHideUnfocusedChildren = false
   showTableOfContents = false
   showCards = false
   groupByYear = true
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
 

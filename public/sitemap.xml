@@ -4,7 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-02-27T10:42:13+08:00</lastmod>
+    <lastmod>2024-05-20T08:45:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2024-05-20T08:45:55+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/sudoku-solver-js/</loc>
+    <lastmod>2024-05-20T08:45:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
