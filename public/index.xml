@@ -14,7 +14,7 @@
       <pubDate>Mon, 20 May 2024 08:45:55 +0800</pubDate>
       
       <guid>http://localhost:1313/projects/sudoku-solver-js/</guid>
-      <description>Hello world</description>
+      <description>This project is a simple sudoku solver that implements a backtracking algorithm programmed in JavaScript.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/sudoku-solver-js/featured.png" />
     </item>
     
