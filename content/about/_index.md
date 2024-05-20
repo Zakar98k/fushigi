@@ -5,6 +5,7 @@ draft = false
 layout = 'single'
 tags = ["hugo", "people"]
 showTableOfContents = false
+showHero = false
 +++
 
 ## print("hello world")
@@ -16,8 +17,8 @@ I'm the type of person who doesn’t really have to worry about what to do with 
 {{< keywordList >}}
 {{< keyword >}} Game-Development {{< /keyword >}}
 {{< keyword >}} Enjoying a good movie {{< /keyword >}}
-{{< keyword >}} Ricing {{< /keyword >}}
-{{< keyword >}} Guilty Gear & Tekken {{< /keyword >}}
+{{< keyword >}} Open-source Software {{< /keyword >}}
+{{< keyword >}} Personalizing Android and Linux {{< /keyword >}}
 {{< keyword >}} Studying Japanese {{< /keyword >}}
 {{< keyword >}} Discovering new music {{< /keyword >}}
 {{< keyword >}} Manga & Anime {{< /keyword >}}

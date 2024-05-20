@@ -1,6 +1,7 @@
 +++
 title = "Homepage"
 +++
+<!-- 
 <div class="italic text-neutral-600 dark:text-primary-400 text-2xl">
 {{< typeit 
   speed=80
@@ -14,3 +15,4 @@ Game-Development
 Album Recommendations
 {{< /typeit >}}
 </div>
+-->
